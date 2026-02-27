@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mind Games Suite - Brain Training Puzzles</title>
+    <meta name="description" content="Train your brain with a super collection of fun puzzle, memory & trivia games!">
+    <style>
+        :root {
+            --primary-color: #4a90e2;
+            --secondary-color: #f39c12;
+            --bg-color: #f8f9fa;
+            --text-color: #333;
+            --card-bg: #fff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-color), #2c3e50);
+            color: white;
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        header p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .intro {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .features {
+            background: var(--card-bg);
+            padding: 3rem 2rem;
+            border-radius: 10px;
+            margin-bottom: 3rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .features ul {
+            list-style: none;
+        }
+
+        .features li {
+            margin-bottom: 1rem;
+            padding-left: 2rem;
+            position: relative;
+        }
+
+        .features li::before {
+            content: "⭐";
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .cta {
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: #2c3e50;
+            color: white;
+            margin-top: 2rem;
+        }
+
+        footer a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Mind Games Suite</h1>
+        <p>Train your brain with a super collection of fun puzzle, memory & trivia games!</p>
+    </header>
+
+    <div class="container">
+        <div class="intro">
+            <p>Welcome to <strong>Mind Games Suite</strong> — your ultimate destination for brain-training and mental
+                exercises! Why download multiple apps when you can have a complete collection of challenging, fun, and
+                relaxing puzzle games all in one place?</p>
+            <br>
+            <p>Whether you want to test your memory, solve tricky puzzles, or expand your vocabulary, Mind Games Suite
+                has something for everyone. Our carefully curated games are designed to stimulate your mind while
+                providing hours of engaging entertainment.</p>
+        </div>
+
+        <h2>🎮 Game Modes Included</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>🧩 Slide Puzzle</h3>
+                <p>The classic sliding tile puzzle! Rearrange the scrambled pieces to form the complete picture. Test
+                    your spatial reasoning and logic as you slide the tiles back into their correct positions.</p>
+            </div>
+
+            <div class="card">
+                <h3>🧠 Memory Match</h3>
+                <p>Sharpen your short-term memory! Flip the cards and find the matching pairs before time runs out. A
+                    timeless classic that keeps your brain active and focused.</p>
+            </div>
+
+            <div class="card">
+                <h3>👁️ Visual Memory</h3>
+                <p>Put your observation skills to the ultimate test! You'll be shown an image of a room or table with
+                    various scattered objects for just a few seconds. Once it disappears, type out everything you
+                    remember seeing! Powered by advanced AI to recognize different words for the same object.</p>
+            </div>
+
+            <div class="card">
+                <h3>📝 Word Guess</h3>
+                <p>Can you find the hidden word? Test your vocabulary and deduction skills in this engaging
+                    word-guessing challenge. Expand your lexicon while having fun!</p>
+            </div>
+
+            <div class="card">
+                <h3>❓ Trivia Quiz</h3>
+                <p>Challenge your general knowledge with a wide variety of quiz questions. Pick the right answers, learn
+                    new facts, and see how much you really know!</p>
+            </div>
+        </div>
+
+        <h2>⭐ Key Features</h2>
+        <div class="features">
+            <ul>
+                <li><strong>All-in-One Experience:</strong> 5 distinct brain-training games in a single, lightweight
+                    app.</li>
+                <li><strong>AI-Powered Gameplay:</strong> Smart word recognition in the Visual Memory game allows for
+                    natural, flexible answers without strict exact-match penalties.</li>
+                <li><strong>Progressive Difficulty:</strong> Suitable for all ages—from beginners to puzzle masters.
+                </li>
+                <li><strong>Clean & Intuitive Interface:</strong> Easy to navigate so you can focus entirely on your
+                    brain training.</li>
+                <li><strong>Track Your Progress:</strong> Keep your mind sharp and see your cognitive skills improve
+                    over time!</li>
+            </ul>
+        </div>
+
+        <div class="cta">
+            <h2>Download Mind Games Suite today!</h2>
+            <p>Start giving your brain the daily workout it deserves.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Baremetal Solutions. All rights reserved.</p>
+        <p><a href="privacypolicy/">Privacy Policy</a></p>
+    </footer>
+
+</body>
+
+</html>
