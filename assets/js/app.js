@@ -1,31 +1,74 @@
-// Nav hamburgerburger selections
-const burger = document.querySelector("#burger-menu");
-const ul = document.querySelector("nav ul");
-const nav = document.querySelector("nav");
+document.addEventListener('DOMContentLoaded', () => {
+  // ==========================================
+  // 1. MOBILE BURGER MENU LOGIC
+  // ==========================================
+  const burgerMenu = document.getElementById('burger-menu');
+  const navMenu = document.getElementById('nav-menu');
+  const navLinks = document.querySelectorAll('.nav-link');
+  const burgerOpenIcon = document.querySelector('.burger-open');
+  const burgerCloseIcon = document.querySelector('.burger-close');
 
-// Scroll to top selection
-const scrollUp = document.querySelector("#scroll-up");
+  function toggleMenu() {
+    navMenu.classList.toggle('show');
+    const isShow = navMenu.classList.contains('show');
+    
+    if (isShow) {
+      burgerOpenIcon.style.display = 'none';
+      burgerCloseIcon.style.display = 'block';
+    } else {
+      burgerOpenIcon.style.display = 'block';
+      burgerCloseIcon.style.display = 'none';
+    }
+  }
 
-// Select nav links
-const navLink = document.querySelectorAll(".nav-link");
+  burgerMenu.addEventListener('click', toggleMenu);
 
-// Hamburger menu function
-burger.addEventListener("click", () => {
-  ul.classList.toggle("show");
-});
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      if (navMenu.classList.contains('show')) {
+        toggleMenu();
+      }
+    });
+  });
 
-// Close hamburger menu when a link is clicked
-navLink.forEach((link) =>
-  link.addEventListener("click", () => {
-    ul.classList.remove("show");
-  })
-);
+  // ==========================================
+  // 2. SCROLL TO TOP & HEADER BG
+  // ==========================================
+  const scrollUp = document.getElementById('scroll-up');
+  
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      scrollUp.classList.add('visible');
+    } else {
+      scrollUp.classList.remove('visible');
+    }
+  });
 
-// scroll to top functionality
-scrollUp.addEventListener("click", () => {
-  window.scrollTo({
-    top: 0,
-    left: 0,
-    behavior: "smooth",
+  scrollUp.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+
+  // ==========================================
+  // 3. DARK / LIGHT THEME TOGGLE
+  // ==========================================
+  const themeToggleBtn = document.getElementById('theme-toggle');
+  
+  // Check localStorage for saved theme preference, fallback to dark
+  const currentTheme = localStorage.getItem('theme') || 'dark';
+  document.documentElement.setAttribute('data-theme', currentTheme);
+
+  themeToggleBtn.addEventListener('click', () => {
+    const activeTheme = document.documentElement.getAttribute('data-theme');
+    let targetTheme = 'dark';
+    
+    if (activeTheme === 'dark') {
+      targetTheme = 'light';
+    }
+    
+    document.documentElement.setAttribute('data-theme', targetTheme);
+    localStorage.setItem('theme', targetTheme);
   });
 });

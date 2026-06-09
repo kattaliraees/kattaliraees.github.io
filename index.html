@@ -1,222 +1,334 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- SEO Meta Tags -->
+  <title>Raees Kattali | Silicon to Software Systems Engineer</title>
+  <meta name="description" content="Portfolio of Raees Kattali, a cross-disciplinary systems engineer with 15+ years of experience bridging analog/digital hardware, firmware, and mobile applications." />
+  <meta name="keywords" content="Embedded Systems, Hardware Design, Firmware, iOS Developer, Flutter, BLE, PCB Layout, ESP32, nRF52, Systems Engineer" />
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Raees Kattali | Silicon to Software Systems Engineer" />
+  <meta property="og:description" content="15+ years of experience bridging bare-metal circuits, low-level firmware, and production-ready mobile apps." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://kattaliraees.github.io" />
 
-  <!--CSS Styles -->
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,700;1,400&family=Outfit:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+  <!-- CSS Styles -->
   <link rel="stylesheet" href="assets/css/styles.css" />
 
   <!-- Favicons -->
   <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png" />
-
-  <!-- Animate CSS CDN -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-  <title>Raees Kattali | Web Developer</title>
 </head>
 
 <body>
+  <!-- Dotted blueprint grid overlay -->
+  <div class="blueprint-overlay"></div>
+
   <!-- Navbar -->
-  <nav>
-    <h1>Raees Kattali</h1>
-    <ul class="navigation">
-      <li><a href="#about" class="nav-link">About</a></li>
-      <li><a href="#skills" class="nav-link">Skills</a></li>
-      <li><a href="#projects" class="nav-link">Projects</a></li>
-      <li><a href="#contact" class="nav-link">Contact</a></li>
-    </ul>
-    <button class="burger-menu" id="burger-menu">
-      <ion-icon class="bars" name="menu-outline"></ion-icon>
-      <!-- <ion-icon class="times" name="close-outline"></ion-icon> -->
-    </button>
-  </nav>
+  <header>
+    <nav class="nav-container">
+      <div class="nav-brand">
+        <a href="#about" class="brand-link">
+          <span class="prompt-char">&gt;</span> RAEES KATTALI<span class="cursor-blink">_</span>
+        </a>
+      </div>
+      
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
 
+      <div class="nav-controls">
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle visual mode">
+          <!-- Light Mode Icon (Sun) -->
+          <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m12.728 12.728l.707.707M12 8a4 4 0 100 8 4 4 0 000-8z" />
+          </svg>
+          <!-- Dark Mode Icon (Moon) -->
+          <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+          </svg>
+        </button>
 
-  <!-- Hero Section -->
-  <section class="hero" id="about">
-    <img src="assets/images/wfh_1.svg" alt="jane-doe" loading="lazy" class="hero-img" />
-    <div class="bio animate__animated animate__shakeX">
-      <h2 class="bio-title">About Me</h2>
-      <p class="bio-text">
-        I am a Full-Stack Electronics Engineer with over 15 years of experience spanning Hardware Design, Firmware
-        Development, and Software Engineering. My core expertise lies in building systems from the silicon level upward,
-        with a strong focus on low-level architectures and performance-optimized embedded solutions.
-      </p>
-      <p class="bio-text">
-        I have led multiple projects from concept and schematic design through PCB layout, prototyping, production-ready
-        firmware, DFM optimization, and regulatory compliance, including EMI certification. I take pride in delivering
-        robust, scalable, and production-grade solutions.
-      </p>
-    </div>
+        <button class="burger-menu" id="burger-menu" aria-label="Open navigation menu">
+          <svg class="burger-open" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+          </svg>
+          <svg class="burger-close" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="display:none;">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+    </nav>
+  </header>
 
-  </section>
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-container">
+        <div class="hero-content">
+          <div class="status-pill animate-fade-in">
+            <span class="status-indicator-dot"></span>
+            <span class="status-text">SYSTEM ACTIVE: 15+ YEARS INTEGRATION</span>
+          </div>
+          <h1 class="hero-title animate-slide-up">
+            SILICON TO<br><span class="gradient-text">SOFTWARE_</span>
+          </h1>
+          <p class="hero-subtitle animate-slide-up-delayed">
+            Cross-disciplinary systems engineer specializing in analog/digital circuit design, low-level firmware architecture, and production-ready mobile ecosystems.
+          </p>
+          <div class="hero-actions animate-slide-up-delayed">
+            <a href="#about" class="btn btn-primary">
+              <span class="btn-text">Read Dossier</span>
+              <svg class="btn-arrow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
+            </a>
+            <a href="#contact" class="btn btn-secondary">Establish Connection</a>
+          </div>
+        </div>
 
-  <section class="more-about">
-    <h2>More About Me</h2>
-    <p>
-      I am passionate about designing complete hardware systems — from component selection and PCB layout to board
-      bring-up and firmware architecture. There is nothing more rewarding than powering a board for the first time and
-      watching the very first line of firmware execute successfully. I enjoy taking products all the way to advanced
-      stages such as secure over-the-air firmware updates and edge-based machine learning inference.
-    </p>
-    <p>
-      My journey began in analog electronics during my teenage years, building discrete circuits and exploring signal
-      behavior. I later transitioned into digital electronics, developing a strong foundation in microcontroller
-      architectures, instruction sets, and low-level programming. Working directly with Assembly language allowed me to
-      deeply understand memory organization, interrupts, timers, watchdog systems, and embedded runtime behavior.
-    </p>
-    <p>
-      Over time, I expanded into higher-level software development, progressively mastering C, C++, Objective-C, Python,
-      Swift, and Rust. This layered progression — from bare-metal systems to modern software ecosystems — enables me to
-      bridge hardware and software seamlessly.
-    </p>
-    <p>
-      I have been developing native iOS applications since 2011, delivering robust and scalable applications across
-      multiple generations of Apple’s ecosystem. I specialize in native iOS development using Objective-C and Swift, and
-      I also build cross-platform applications using Flutter. Since adopting Flutter in 2019, it has become my preferred
-      framework for developing high-performance, maintainable mobile solutions.
-    </p>
-    <p>
-      My expertise spans the entire technology stack — from passive components and discrete analog circuits to
-      transistors, timers, operational amplifiers, logic gates, FPGA systems, instruction set architectures, compilers,
-      operating systems, runtime environments, and modern application frameworks.
-    </p>
-  </section>
+        <div class="hero-visual animate-fade-in-delayed">
+          <!-- Interactive Technical Blueprint / Animated Circuit Board SVG -->
+          <div class="circuit-canvas-container">
+            <svg class="circuit-svg" viewBox="0 0 600 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="trace-grad-1" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="var(--accent-cyan)" stop-opacity="0.2"/>
+                  <stop offset="100%" stop-color="var(--accent-cyan)" stop-opacity="1"/>
+                </linearGradient>
+                <linearGradient id="trace-grad-2" x1="0%" y1="100%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="var(--accent-green)" stop-opacity="0.2"/>
+                  <stop offset="100%" stop-color="var(--accent-green)" stop-opacity="1"/>
+                </linearGradient>
+                <linearGradient id="trace-grad-3" x1="100%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stop-color="var(--accent-amber)" stop-opacity="0.2"/>
+                  <stop offset="100%" stop-color="var(--accent-amber)" stop-opacity="1"/>
+                </linearGradient>
+                <radialGradient id="soc-glow" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stop-color="var(--accent-cyan)" stop-opacity="0.2"/>
+                  <stop offset="100%" stop-color="transparent" stop-opacity="0"/>
+                </radialGradient>
+              </defs>
 
+              <!-- Blueprint Grid inside visual -->
+              <rect x="10" y="10" width="580" height="480" rx="12" stroke="var(--card-border)" stroke-width="1.5" stroke-dasharray="8 4"/>
+              
+              <!-- Silicon Chip Core (SoC representation) -->
+              <g class="soc-group">
+                <rect class="soc-glow" x="240" y="190" width="120" height="120" rx="8" fill="url(#soc-glow)"/>
+                <rect class="soc-package" x="250" y="200" width="100" height="100" rx="6" fill="var(--card-bg)" stroke="var(--accent-amber)" stroke-width="2"/>
+                <rect class="soc-die" x="275" y="225" width="50" height="50" rx="2" fill="var(--bg-primary)" stroke="var(--accent-cyan)" stroke-width="1.5"/>
+                <!-- Core wiring traces -->
+                <line x1="250" y1="220" x2="240" y2="220" stroke="var(--accent-amber)" stroke-width="1.5"/>
+                <line x1="250" y1="240" x2="240" y2="240" stroke="var(--accent-amber)" stroke-width="1.5"/>
+                <line x1="250" y1="260" x2="240" y2="260" stroke="var(--accent-amber)" stroke-width="1.5"/>
+                <line x1="250" y1="280" x2="240" y2="280" stroke="var(--accent-amber)" stroke-width="1.5"/>
 
+                <line x1="350" y1="220" x2="360" y2="220" stroke="var(--accent-amber)" stroke-width="1.5"/>
+                <line x1="350" y1="240" x2="360" y2="240" stroke="var(--accent-amber)" stroke-width="1.5"/>
+                <line x1="350" y1="260" x2="360" y2="260" stroke="var(--accent-amber)" stroke-width="1.5"/>
+                <line x1="350" y1="280" x2="360" y2="280" stroke="var(--accent-amber)" stroke-width="1.5"/>
+                
+                <text x="300" y="255" class="soc-text" fill="var(--text-secondary)" font-family="JetBrains Mono" font-size="10" text-anchor="middle">MCU_CORE</text>
+              </g>
 
-  <!-- Skills section -->
-  <section class="skills" id="skills">
-    <h2 class="skill-header">My Top Skills</h2>
+              <!-- Oscilloscope Wave Graphics -->
+              <path class="circuit-wave-cyan" d="M 30,80 Q 70,30 110,80 T 190,80 T 270,80" fill="none" stroke="var(--accent-cyan)" stroke-width="1.5" stroke-dasharray="5 5"/>
+              <circle cx="270" cy="80" r="3" fill="var(--accent-cyan)"/>
+              <line x1="270" y1="80" x2="300" y2="200" stroke="url(#trace-grad-1)" stroke-width="1.5"/>
 
-    <div class="skills-wrapper">
-      <div class="first-set animate__animated animate__pulse">
-        <img src="assets/icons/C_Programming_Language.svg" alt="" loading="lazy" class="icon icon-card" />
-        <img src="assets/icons/C++_Logo.svg" alt="" loading="lazy" class="icon icon-card" />
-        <img src="assets/icons/swift.svg" alt="" loading="lazy" class="icon icon-card" />
-        <img src="assets/icons/rust.svg" alt="" loading="lazy" class="icon icon-card" />
+              <!-- App Screen Symbol representation -->
+              <rect x="440" y="50" width="80" height="140" rx="10" fill="var(--card-bg)" stroke="var(--card-border)" stroke-width="2"/>
+              <rect x="450" y="65" width="60" height="100" rx="3" fill="var(--bg-primary)" stroke="var(--accent-cyan)" stroke-width="1"/>
+              <circle cx="480" cy="177" r="4" fill="var(--card-border)"/>
+              <!-- Trace from phone to SoC -->
+              <path d="M 440,110 L 390,110 L 340,200" fill="none" stroke="url(#trace-grad-1)" stroke-width="2" class="pulse-trace-1"/>
+
+              <!-- Antenna / RF Symbol -->
+              <path d="M 80,420 L 80,380 M 70,380 L 90,380 M 80,380 L 65,360 M 80,380 L 95,360" fill="none" stroke="var(--accent-copper)" stroke-width="2"/>
+              <path d="M 100,350 A 25,25 0 0,1 100,390" fill="none" stroke="var(--accent-copper)" stroke-opacity="0.5" stroke-width="1.5"/>
+              <path d="M 110,340 A 40,40 0 0,1 110,400" fill="none" stroke="var(--accent-copper)" stroke-opacity="0.2" stroke-width="1.5"/>
+              <!-- Trace from Antenna to SoC -->
+              <path d="M 80,420 L 160,420 L 250,300" fill="none" stroke="url(#trace-grad-3)" stroke-width="2" class="pulse-trace-2"/>
+
+              <!-- Hardware Component (Inductor/Capacitor block) -->
+              <rect x="450" y="380" width="70" height="50" rx="4" fill="var(--card-bg)" stroke="var(--accent-green)" stroke-width="1.5"/>
+              <circle cx="470" cy="405" r="8" fill="none" stroke="var(--text-secondary)" stroke-width="1.5"/>
+              <circle cx="500" cy="405" r="8" fill="none" stroke="var(--text-secondary)" stroke-width="1.5"/>
+              <path d="M 520,405 L 420,405 L 350,300" fill="none" stroke="url(#trace-grad-2)" stroke-width="2" class="pulse-trace-3"/>
+              
+              <!-- Background grid junction pads -->
+              <circle cx="300" cy="200" r="2.5" fill="var(--accent-amber)"/>
+              <circle cx="340" cy="200" r="2.5" fill="var(--accent-cyan)"/>
+              <circle cx="250" cy="300" r="2.5" fill="var(--accent-copper)"/>
+              <circle cx="350" cy="300" r="2.5" fill="var(--accent-green)"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dossier/About Section -->
+    <section class="section-container" id="about">
+      <div class="section-header">
+        <span class="section-tag">&gt;_ EXECUTIVE_DOSSIER</span>
+        <h2 class="section-title">Bridging Two Worlds</h2>
+        <div class="title-bar"></div>
       </div>
 
-      <div class="second-set animate__animated animate__pulse">
-        <img src="assets/icons/Python-logo.svg" alt="" loading="lazy" class="icon icon-card" />
-        <img src="assets/icons/flutter.svg" alt="" loading="lazy" class="icon icon-card" />
-        <img src="assets/icons/KiCad-Logo.svg" alt="" loading="lazy" class="icon icon-card" />
-        <img src="assets/icons/icons8-git.svg" alt="" loading="lazy" class="icon icon-card" />
+      <div class="bio-grid">
+        <div class="bio-main-card card">
+          <div class="card-glow-edge"></div>
+          <p class="bio-lead">
+            I’m a cross-disciplinary systems engineer with over 15 years of experience delivering robust products that span from bare silicon up to production software layers.
+          </p>
+          <p class="bio-body">
+            My background bridges analog hardware design, bare-metal/RTOS-based firmware architectures, and native mobile frontends. This synthesis allows me to architect cohesive, tightly integrated products, eliminating the traditional friction interface between hardware design, low-level firmware engineering, and application software.
+          </p>
+          <p class="bio-body">
+            I specialize in bringing designs from initial sketch, schematic, and board layout, through component selection, prototyping, DFM optimization, and EMI certification, straight to mass production. On the software side, I write highly performant systems code in C, C++, and Rust, while shipping seamless end-user applications using Swift for iOS and Flutter/Dart for cross-platform products.
+          </p>
+        </div>
+
+        <div class="bio-stats-cards">
+          <div class="stat-card card">
+            <div class="stat-value">15+</div>
+            <div class="stat-label">Years of Experience</div>
+            <div class="stat-desc">Silicon to Software</div>
+          </div>
+          <div class="stat-card card">
+            <div class="stat-value">40+</div>
+            <div class="stat-label">Completed Boards</div>
+            <div class="stat-desc">KiCad, DFM, RF & Analog</div>
+          </div>
+          <div class="stat-card card">
+            <div class="stat-value">25K+</div>
+            <div class="stat-label">Production Installs</div>
+            <div class="stat-desc">iOS and Android Apps</div>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
 
-  <!-- Projects section -->
-  <section class="projects" id="projects">
-    <h2 class="projects-title">Some of my Recent Projects</h2>
-    <!--<div class="projects-container">
-        <div class="project-container project-card">
-          <img
-            src="assets/images/expenseTracker.png"
-            alt="expense-tracker"
-            loading="lazy"
-            class="project-pic"
-          />
-          <h3 class="project-title">Expense Tracker</h3>
-          <p class="project-details">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas
-            ratione vel inventore labore commodi modi quos culpa aut saepe!
-            Alias!
-          </p>
-          <a href="#" target="_blank" class="project-link">Check it Out</a>
+      <!-- Core Pillars -->
+      <div class="pillars-grid">
+        <!-- Pillar 1 -->
+        <div class="pillar-card card" style="--pillar-color: var(--accent-copper)">
+          <div class="pillar-icon">
+            <!-- PCB/Circuit icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+            </svg>
+          </div>
+          <h3 class="pillar-title">Hardware & PCB Design</h3>
+          <p class="pillar-text">Analog, digital, and RF circuit design, professional multi-layer PCB layout using KiCad, component selection, PCBA production prep, DFM optimization, and EMI testing/compliance.</p>
         </div>
-        <div class="project-container project-card">
-          <img
-            src="assets/images/netflixClone.png"
-            alt="netflic-clone"
-            loading="lazy"
-            class="project-pic"
-          />
-          <h3 class="project-title">Netflix Clone</h3>
-          <p class="project-details">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas
-            ratione vel inventore labore commodi modi quos culpa aut saepe!
-            Alias!
-          </p>
-          <a href="#" target="_blank" class="project-link">Check it Out</a>
-        </div>
-        <div class="project-container project-card">
-          <img
-            src="assets/images/greenyEarth.png"
-            alt="greeny-earth"
-            loading="lazy"
-            class="project-pic"
-          />
-          <h3 class="project-title">Greeny Earth</h3>
-          <p class="project-details">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas
-            ratione vel inventore labore commodi modi quos culpa aut saepe!
-            Alias!
-          </p>
-          <a href="#" target="_blank" class="project-link">Check it Out</a>
-        </div>
-      </div>-->
-  </section>
 
-  <!-- Contact section -->
-  <section class="contact" id="contact">
-    <h2>Get In Touch With Me</h2>
-    <div class="contact-form-container">
-      <div class="contact-form">
-        <form action="https://formspree.io/f/xyylnggw" method="POST">
-          <div class="form-control">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="sender-name" placeholder="Enter Your Name" class="input-field"
-              required />
+        <!-- Pillar 2 -->
+        <div class="pillar-card card" style="--pillar-color: var(--accent-amber)">
+          <div class="pillar-icon">
+            <!-- Microchip/Firmware icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+            </svg>
           </div>
-          <div class="form-control">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="sender-email" placeholder="Enter Your Email" class="input-field"
-              required />
+          <h3 class="pillar-title">Firmware & Bare-Metal</h3>
+          <p class="pillar-text">Low-level embedded coding in C, C++, and Assembly on ESP32, nRF52, STM32. Custom peripheral drivers, DMA transfers, interrupt service routines, RTOS scheduling, and power optimization.</p>
+        </div>
+
+        <!-- Pillar 3 -->
+        <div class="pillar-card card" style="--pillar-color: var(--accent-cyan)">
+          <div class="pillar-icon">
+            <!-- Mobile App icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+            </svg>
           </div>
-          <div class="form-control">
-            <label for="message">Message</label>
-            <textarea id="message" cols="60" rows="10" placeholder="Enter Your Message" name="message"
-              class="input-field" required></textarea>
-          </div>
-          <input type="submit" value="Submit" id="submit-btn" class="submit-btn" />
-        </form>
+          <h3 class="pillar-title">Connected Mobile Apps</h3>
+          <p class="pillar-text">Native iOS development (Swift, Objective-C) and cross-platform apps using Flutter. Deep integration with hardware peripherals via Bluetooth Low Energy (BLE), NFC, and Wi-Fi networks.</p>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Social accounts - Fixed to the right -->
-  <div class="socials">
-    <a href="https://twitter.com/kattaliraees" target="_blank"><img src="assets/icons/icons8-twitter-circled.gif"
-        alt="Twitter" loading="lazy" class="socicon" /></a>
-    <a href="https://www.linkedin.com/in/kattaliraees" target="_blank"><img
-        src="assets/icons/icons8-linkedin-circled.gif" alt="Linkedin" loading="lazy" class="socicon" /></a>
-    <a href="https://github.com/kattaliraees" target="_blank"><img src="assets/icons/icons8-github.gif" alt="Github"
-        class="socicon" /></a>
-  </div>
+    <!-- Consultation Request Section -->
+    <section class="section-container" id="contact">
+      <div class="section-header">
+        <span class="section-tag">&gt;_ SYSTEM_CONSULTATION</span>
+        <h2 class="section-title">Request Consultation</h2>
+        <div class="title-bar"></div>
+        <p class="section-desc">Have a product architecture challenge bridging hardware, firmware, or mobile apps? Let's connect to discuss schematics, firmware maps, or app interfaces.</p>
+      </div>
 
-  <!-- Scroll to top -->
-  <i class="scroll-up" id="scroll-up"><img src="assets/icons/icons8-upward-arrow.gif" class="socicon up-arrow"
-      alt="" /></i>
+      <div class="contact-wrapper">
+        <div class="contact-form-card card" style="text-align: center; display: flex; flex-direction: column; align-items: center; gap: 1.5rem; padding: 3rem 2rem;">
+          <div class="card-glow-edge"></div>
+          <div class="terminal-cmd-line" style="font-family: var(--font-mono); font-size: 0.9rem; color: var(--accent-green); background-color: var(--bg-secondary); padding: 0.75rem 1.5rem; border-radius: 6px; border: 1px solid var(--card-border); width: 100%; max-width: 500px; margin: 0 auto 0.5rem; text-align: left; box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.4);">
+            <span class="prompt-char">&gt;</span> mailto kattaliraees@gmail.com
+          </div>
+          <p class="consultation-sub" style="color: var(--text-secondary); max-width: 550px; margin: 0 auto; font-size: 1rem; line-height: 1.6;">
+            Initiate a secure communication protocol. Click below to launch your email client and transmit details regarding your product specifications.
+          </p>
+          <a href="mailto:kattaliraees@gmail.com?subject=Consultation%20Request%20-%20Systems%20Engineering" class="btn" style="margin-top: 0.5rem; font-family: var(--font-mono); font-weight: 700; font-size: 1rem; display: inline-flex; align-items: center; gap: 0.75rem; padding: 1rem 2rem; background-color: var(--accent-cyan); color: #000; border: none; box-shadow: 0 0 15px rgba(0, 245, 255, 0.15); transition: transform 0.2s, box-shadow 0.2s; cursor: pointer; border-radius: 6px;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 5px 20px rgba(0, 245, 255, 0.35)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 0 15px rgba(0, 245, 255, 0.15)';">
+            <span class="btn-text">INITIATE CONSULTATION LINK</span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="width: 1.25rem; height: 1.25rem;">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 00-2 2z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
 
-  <!-- Footer section -->
+  <!-- Scroll to top button -->
+  <button id="scroll-up" class="scroll-up-btn" aria-label="Scroll to top of dashboard">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+    </svg>
+  </button>
+
+  <!-- Footer Section -->
   <footer>
-    <p class="copy">&copy; Copyright 2021</p>
-    <p class="copy">
-      Built with &#x2661; by
-      <a href="https://twitter.com/koladechris" target="_blank">Kolade Chris (Ksound)</a>
-    </p>
+    <div class="footer-container">
+      <div class="footer-brand">
+        <span class="prompt-char">&gt;</span> RAEES KATTALI
+      </div>
+
+      
+      <div class="footer-socials">
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/in/kattaliraees" target="_blank" class="social-link" aria-label="LinkedIn Profile">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+          </svg>
+        </a>
+        <!-- GitHub -->
+        <a href="https://github.com/kattaliraees" target="_blank" class="social-link" aria-label="GitHub Profile">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+            <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+          </svg>
+        </a>
+        <!-- Twitter / X -->
+        <a href="https://twitter.com/kattaliraees" target="_blank" class="social-link" aria-label="Twitter Profile">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
   </footer>
 
   <!-- Website scripts -->
   <script src="assets/js/app.js"></script>
-
-  <!-- Ion icons scripts -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>
