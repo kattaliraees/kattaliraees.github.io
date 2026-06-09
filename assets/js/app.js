@@ -1,38 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   // ==========================================
-  // 1. MOBILE BURGER MENU LOGIC
-  // ==========================================
-  const burgerMenu = document.getElementById('burger-menu');
-  const navMenu = document.getElementById('nav-menu');
-  const navLinks = document.querySelectorAll('.nav-link');
-  const burgerOpenIcon = document.querySelector('.burger-open');
-  const burgerCloseIcon = document.querySelector('.burger-close');
-
-  function toggleMenu() {
-    navMenu.classList.toggle('show');
-    const isShow = navMenu.classList.contains('show');
-    
-    if (isShow) {
-      burgerOpenIcon.style.display = 'none';
-      burgerCloseIcon.style.display = 'block';
-    } else {
-      burgerOpenIcon.style.display = 'block';
-      burgerCloseIcon.style.display = 'none';
-    }
-  }
-
-  burgerMenu.addEventListener('click', toggleMenu);
-
-  navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      if (navMenu.classList.contains('show')) {
-        toggleMenu();
-      }
-    });
-  });
-
-  // ==========================================
-  // 2. SCROLL TO TOP & HEADER BG
+  // 1. SCROLL TO TOP & HEADER BG
   // ==========================================
   const scrollUp = document.getElementById('scroll-up');
   
@@ -52,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ==========================================
-  // 3. DARK / LIGHT THEME TOGGLE
+  // 2. DARK / LIGHT THEME TOGGLE
   // ==========================================
   const themeToggleBtn = document.getElementById('theme-toggle');
   
